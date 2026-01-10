@@ -1,0 +1,11 @@
+#textfield-component-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    input {
+        border: none;
+        background: inherit;
+    }
+
+}

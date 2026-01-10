@@ -1,0 +1,13 @@
+#mainpage-component-wrapper {
+    display: flex;
+
+    #mainpage-component-profile-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #mainpage-component-profile-picture {
+        display: flex;
+        justify-content: center;
+    }
+}
