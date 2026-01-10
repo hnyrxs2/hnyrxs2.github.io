@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { generateElementId } from "../../common/util";
 
-interface TextFieldProps {
+export interface TextFieldProps {
     id: string;
     textType: 'normal' | 'header' | 'subheader';
     textAlignment?: 'left' | 'center' | 'right';

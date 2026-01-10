@@ -1,8 +1,12 @@
 @import './App.css';
 
-@import './sass/components/ui/textfield.sass';
+@import './sass/mainpage.sass';
 @import './sass/components/profile.sass';
+
+@import './sass/components/ui/textfield.sass';
 @import './sass/components/ui/textarea.sass';
+@import './sass/components/ui/toolbar.sass';
+@import './sass/components/ui/imagedisplay.sass';
 
 * {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -39,10 +43,13 @@ a:hover {
 
 body {
   /* margin: 0; */
+  /* place-items: center; */
+  overflow: hidden;
   display: flex;
-  place-items: center;
+  justify-content: center;
   min-width: 320px;
   min-height: 100vh;
+  background: linear-gradient(180deg,rgba(255, 255, 255, 1) 47%, rgba(37, 137, 132, 0.38) 96%);
 }
 
 h1 {
