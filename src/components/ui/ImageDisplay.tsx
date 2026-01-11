@@ -42,7 +42,7 @@ const ImageDisplay = (props: ImageDisplayProps) => {
 
     return (<>
         <div id='imagedisplay-component-wrapper' style={borderCustomStyle}>
-            <img id={props.id} src={props.src} alt={props.altText} style={imgCustomStyle} />
+            <img id={props.id} src={props.src} alt={props.altText} style={imgCustomStyle} tabIndex={0}/>
         </div>
     </>);
 }

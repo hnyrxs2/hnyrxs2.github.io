@@ -16,7 +16,9 @@ const MainPage = () => {
                     <ImageDisplay
                         id={DevData.Name}
                         src={DevProfileFiles.ProfilePictureThumbnail}
-                        displayStyle={{ frameType: 'round', frameColor: 'none', frameWidth: 'medium' }} />
+                        displayStyle={{ frameType: 'round', frameColor: 'none', frameWidth: 'medium' }}
+                        altText={`${DevData.Name} profile picture`}
+                    />
                 </div>
                 {devMainHeader}
             </div>
