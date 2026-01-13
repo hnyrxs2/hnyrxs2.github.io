@@ -1,18 +1,19 @@
-import { DevData, devHeader, DevProfileFiles } from "../common/constants";
-import { generateElementId } from "../common/util";
-import ImageDisplay from "./ui/ImageDisplay";
-import TextField from "./ui/TextField";
+import { DevData, DevHeader, DevProfileFiles } from '../common/constants';
+import { generateElementId } from '../common/util';
+import { ComponentPrefix } from './constants';
+import Footer from './ui/Footer';
+import ImageDisplay from './ui/ImageDisplay';
+import TextField from './ui/TextField';
 
-const componentPrefix = 'mainpage-component';
 const MainPage = () => {
-    const devMainHeader = devHeader.map((header) => {
+    const devMainHeader = DevHeader.map((header) => {
         return <TextField id={header.id} textType={header.textType} value={header.value} textAlignment={header.textAlignment} />;
     });
 
     return (<>
-        <div id={generateElementId(componentPrefix, 'wrapper')}>
-            <div id={generateElementId(componentPrefix, 'profile', 'section')}>
-                <div id={generateElementId(componentPrefix, 'profile', 'picture')}>
+        <div id={generateElementId(ComponentPrefix.MainPage, 'wrapper')}>
+            <div id={generateElementId(ComponentPrefix.MainPage, 'profile', 'section')}>
+                <div id={generateElementId(ComponentPrefix.MainPage, 'profile', 'picture')}>
                     <ImageDisplay
                         id={DevData.Name}
                         src={DevProfileFiles.ProfilePictureThumbnail}
@@ -22,6 +23,7 @@ const MainPage = () => {
                 </div>
                 {devMainHeader}
             </div>
+            <Footer id={generateElementId(ComponentPrefix.MainPage, 'footer')} />
         </div>
     </>);
 }

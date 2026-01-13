@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { generateElementId } from "../../common/util";
+import { ComponentPrefix } from '../constants';
 
 interface TextAreaProps {
     id: string;
@@ -7,16 +8,14 @@ interface TextAreaProps {
     textAlignment?: 'left' | 'center' | 'right' | 'justify';
 };
 
-const componentPrefix = 'textarea-component';
-
 const TextArea = (props: TextAreaProps) => {
     const customStyle: React.CSSProperties = {
         textAlign: props.textAlignment ? props.textAlignment : 'left'
     };
 
     return(<>
-        <div id={generateElementId(componentPrefix, 'wrapper')}>
-            <p id={generateElementId(componentPrefix, 'input')} style={customStyle}>{props.value}</p>
+        <div id={generateElementId(ComponentPrefix.TextArea, 'wrapper')}>
+            <p id={generateElementId(ComponentPrefix.TextArea, 'input')} style={customStyle}>{props.value}</p>
         </div>
     </>);
 }

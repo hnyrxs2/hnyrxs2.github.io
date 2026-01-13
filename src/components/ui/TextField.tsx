@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import { generateElementId } from "../../common/util";
+import { ComponentPrefix } from '../constants';
 
 export interface TextFieldProps {
     id: string;
@@ -8,8 +9,6 @@ export interface TextFieldProps {
     textAlignment?: 'left' | 'center' | 'right';
     value: string;
 };
-
-const componentPrefix = 'textfield-component';
 
 const TextField = (props: TextFieldProps) => {
     const defaultStyle: React.CSSProperties = {
@@ -44,8 +43,8 @@ const TextField = (props: TextFieldProps) => {
     }
 
     return (
-        <div id={generateElementId(componentPrefix, 'wrapper')}>
-            <input type='text' id={generateElementId(componentPrefix, props.id, 'input')} value={props.value} style={customStyle} />
+        <div id={generateElementId(ComponentPrefix.TextField, 'wrapper')}>
+            <input type='text' id={generateElementId(ComponentPrefix.TextField, props.id, 'input')} value={props.value} style={customStyle} />
         </div>
     )
 };

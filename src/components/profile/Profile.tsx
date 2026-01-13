@@ -1,17 +1,16 @@
 import { DevData, DevProfileFiles } from '../../common/constants';
 import { generateElementId } from '../../common/util';
+import { ComponentPrefix } from '../constants';
 import TextArea from '../ui/TextArea';
 import TextField from '../ui/TextField';
 
-const componentPrefix = 'profile-component';
-
 const Profile = () => {
-    console.log(generateElementId(componentPrefix, 'wrapper'));
+    console.log(generateElementId(ComponentPrefix.Profile, 'wrapper'));
     return (<>
-        <div id={generateElementId(componentPrefix, 'wrapper')}>
-            <div id={generateElementId(componentPrefix, 'header')}>
-                <img id={generateElementId(componentPrefix, 'headerImg')} src={DevProfileFiles.ProfilePictureThumbnail} />
-                <div id={generateElementId(componentPrefix, 'headerText')}>
+        <div id={generateElementId(ComponentPrefix.Profile, 'wrapper')}>
+            <div id={generateElementId(ComponentPrefix.Profile, 'header')}>
+                <img id={generateElementId(ComponentPrefix.Profile, 'headerImg')} src={DevProfileFiles.ProfilePictureThumbnail} />
+                <div id={generateElementId(ComponentPrefix.Profile, 'headerText')}>
                     <TextField id='devName' textType='header' value={DevData.Name} />
                     <TextField id='devPosition' textType='subheader' value={DevData.Position} />
                 </div>

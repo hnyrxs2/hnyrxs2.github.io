@@ -1,4 +1,6 @@
 import * as React from 'react';
+import { generateElementId } from '../../common/util';
+import { ComponentPrefix } from '../constants';
 
 interface ImageDisplayProps {
     id: string;
@@ -9,7 +11,7 @@ interface ImageDisplayProps {
         frameWidth: 'none' | 'medium' | 'thick'
     };
     altText?: string;
-}
+};
 
 const ImageDisplay = (props: ImageDisplayProps) => {
     const { displayStyle } = props;
@@ -41,7 +43,7 @@ const ImageDisplay = (props: ImageDisplayProps) => {
     const { frameStyle: borderCustomStyle, imgCustomStyle } = getCustomStyle();
 
     return (<>
-        <div id='imagedisplay-component-wrapper' style={borderCustomStyle}>
+        <div id={generateElementId(ComponentPrefix.ImageDisplay, 'wrapper')} style={borderCustomStyle}>
             <img id={props.id} src={props.src} alt={props.altText} style={imgCustomStyle} tabIndex={0}/>
         </div>
     </>);
