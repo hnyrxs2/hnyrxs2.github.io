@@ -1,23 +1,20 @@
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
-import HomePage from '../pages/HomePage';
-import About from '../pages/About';
-import Contact from '../pages/Contact';
+import { NavLink } from 'react-router-dom'
+import logo from '../assets/rm_logo.jpg';
 
 const ToolBar = () => {
-    return (<BrowserRouter>
-        {/* Navigation */}
-        <nav>
-            <Link to="/">Home</Link> |{" "}
-            <Link to="/about">About</Link> |{" "}
-            <Link to="/contact">Contact</Link>
-        </nav>
-
-        {/* Routes */}
-        <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-        </Routes>
-    </BrowserRouter>)
-}
+    return (
+        <div>
+            <div id='rm-toolbar-wrapper'>
+                <div id='rm-toolbar-logo'>
+                    <img src={logo} alt="RM Logo" />
+                </div>
+                <nav id='rm-toolbar-nav'>
+                    <NavLink to="/">Home</NavLink>
+                    <NavLink to="/about">About</NavLink>
+                    <NavLink to="/contact">Contact</NavLink>
+                </nav>
+            </div>
+        </div>
+    )
+};
 export default ToolBar;

@@ -1,0 +1,34 @@
+#rm-toolbar-wrapper {
+    display: flex;
+    align-items: stretch;
+    background-color: aliceblue;
+}
+
+#rm-toolbar-logo {
+    width: 5%;
+    margin-right: 2%;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+#rm-toolbar-nav {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    a:hover,
+    a.active {
+        border-bottom: 2px solid black;
+    }
+}
