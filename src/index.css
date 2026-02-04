@@ -1,6 +1,7 @@
 @import '../src/styles/components/toolbar.scss';
 @import '../src/styles/components/carousel.scss';
 @import '../src/styles/components/about.scss';
+@import '../src/styles/components/contactus.scss';
 
 
 :root {

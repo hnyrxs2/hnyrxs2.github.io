@@ -1,6 +1,8 @@
+import Carousel from "../components/Carousel";
+
 const HomePage = () => {
-    return(<div>
-        <h1>Home</h1>
+    return(<div id='rm-home-wrapper'>
+        <Carousel />
     </div>)
 };
 

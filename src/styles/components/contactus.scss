@@ -1,0 +1,10 @@
+#rm-contactus-wrapper {
+    background-color: aliceblue;
+    padding: 2em;
+
+    #rm-contactus-detials {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+};
