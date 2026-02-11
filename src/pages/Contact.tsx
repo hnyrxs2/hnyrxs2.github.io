@@ -32,13 +32,16 @@ const Contact = () => {
     return (<div id='rm-contactus-wrapper'>
         <div id='rm-contactus-folder-top'></div>
         <div id='rm-contactus-details'>
-            {details.map((detail, key) =>
+            <h1 id='rm-contactus-headertxt'>Let's keep in touch!</h1>
+            <div id='rm-contactus-items'>
+                {details.map((detail, key) =>
                 (<div id='rm-contactus-item' key={key}>
                     <div id='rm-contactus-item-icon'>{detail.icon}</div>
                     {detail.type === 'link' ? <a target='_blank' href={detail.value} id='rm-contactus-item-value'>{normalizeURL(detail.value)}</a> :
                         <span id='rm-contactus-item-value'>{detail.value}</span>}
                 </div>)
-            )}
+                )}
+            </div>
         </div>
     </div>);
 };
