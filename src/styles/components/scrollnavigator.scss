@@ -1,0 +1,63 @@
+@use '../constant.scss' as *;
+
+#rm-scrollnav-wrapper {
+    background-color: $BGColor;
+    display: flex;
+    flex-direction: row;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    path {
+        stroke: $color-text-primary;
+    }
+
+    #rm-scrollnav-burger-menu {
+        display: none;
+    }
+
+    #rm-scrollnav-logo {
+        display: flex;
+        align-items: center;
+
+        svg {
+            width: 6em;
+            height: 4em;
+        }
+    }
+
+    #rm-scrollnav-items {
+        display: flex;
+        margin: 0 0 0 1em;
+
+        a {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-right: 2em;
+            color: $color-text-primary;
+        }
+
+        a:hover,
+        a.active {
+            border-bottom: 4px solid $color-dark-stone;
+            cursor: pointer;
+        }
+    }
+}
+
+@media(max-width: $bp-tablet) {
+    #rm-scrollnav-wrapper {
+        #rm-scrollnav-burger-menu {
+            display: flex;
+            margin-left: auto;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        #rm-scrollnav-items {
+            display: none;
+        }
+    }
+}

@@ -1,8 +1,11 @@
 
 @import '../src/styles/components/toolbar.scss';
+@import '../src//styles/components/scrollnavigator.scss';
 @import '../src/styles/components/carousel.scss';
 @import '../src/styles/components/about.scss';
 @import '../src/styles/components/contactus.scss';
+
+@import '../src/styles/pages/homepage.scss';
 
 
 :root {
@@ -33,8 +36,8 @@ a {
 body {
   margin: 0;
   display: flex;
-  min-width: 320px;
-  min-height: 100vh;
+  /* min-width: 320px;
+  min-height: 100vh; */
   background-color: #F7F5F2;
 }
 

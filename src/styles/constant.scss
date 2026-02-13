@@ -1,4 +1,11 @@
-$BGColor: #ac7855;
+// screen responsiveness
+$bp-tablet: 768px;
+$bp-laptop: 1024px;
+$bp-desktop: 1280px;
+$bp-large: 1536px;
+
+// $BGColor: #ac7855; // #ac785587
+$BGColor: #ac785587;
 $primaryText: #F5E6D8;
 $secondaryText: #E6D2C3;
 $accentColor: #6E8B6B; //muted sage green
@@ -10,8 +17,9 @@ $folderColor1: #cfe5f8;
 
 
 // AI Palette Suggestion
-// ----- Main -----
-$color-background: #ac7855;
+// // ----- Main -----
+// // $color-background: #ac7855;
+$color-background: #ac785587;
 $color-text-primary: #F1ECE6;
 $color-text-secondary: #E0D6CD;
 
@@ -23,3 +31,22 @@ $color-dark-stone: #3A332E;
 // ----- Accents -----
 $color-accent-sage: #7A8A7B;
 $color-accent-steel-blue: #6E7C85;
+
+// ========================================
+// Architect Portfolio Color System v2
+// Base: #ac785587 (soft clay overlay)
+// ========================================
+
+// // ----- Main -----
+// $color-background: #ac785587;
+// $color-text-primary: #2F2924;     // warm charcoal (better contrast with soft bg)
+// $color-text-secondary: #5A514A;   // muted stone brown
+
+// // ----- Neutrals -----
+// $color-off-white: #F6F3EF;        // refined plaster
+// $color-concrete-gray: #D8D2CB;    // architectural concrete
+// $color-dark-stone: #2B2521;       // structural dark
+
+// // ----- Accent (subtle, not loud) -----
+// $color-accent-sage: #6F8074;      // restrained green
+// $color-accent-steel-blue: #65737C; // cool architectural steel

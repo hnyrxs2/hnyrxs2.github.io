@@ -25,6 +25,7 @@
     a {
         color: $color-text-primary;
     }
+
     a:hover {
         text-decoration: underline;
         color: $secondaryText;
@@ -42,6 +43,14 @@
     //     // background-color: $folderColor;
     //     // width: 100%;
     // }
+
+    #rm-contactus-columns {
+        display: flex;
+        flex-direction: row;
+        padding: 1em;
+        align-items: flex-start;
+        width: 90%;
+    }
 
     #rm-contactus-items {
         display: flex;
@@ -77,4 +86,14 @@
     }
 }
 
-;
+@media(max-width: $bp-tablet) {
+    #rm-contactus-wrapper {
+        #rm-contactus-columns {
+            flex-direction: column;
+        }
+        #rm-contactus-items {
+            align-items: center;
+        }
+    }
+
+}

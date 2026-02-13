@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import './App.css'
+import './App.scss'
 // import ToolBar from './components/Toolbar';
 import About from './pages/About';
 import Contact from './pages/Contact';

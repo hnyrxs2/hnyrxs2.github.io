@@ -1,25 +1,22 @@
-// import { NavLink } from 'react-router-dom';
-import logo from '../assets/rm_logo.jpg';
-
+import { RMLogo } from './icons';
+import { scrollTo } from './common';
+import HamburgerIcon from './icons/HamburgerIcon';
 
 const ScrollNavigator = () => {
-    const scrollTo = (id: string) => {
-        document.getElementById(id)?.scrollIntoView({
-            behavior: 'smooth',
-        });
-    };
+
     return (
         <div>
-            <div id='rm-toolbar-wrapper'>
-                <div id='rm-toolbar-logo'>
-                    <img src={logo} alt="RM Logo" />
+            <div id='rm-scrollnav-wrapper'>
+                <div id='rm-scrollnav-logo'>
+                <RMLogo/>
                 </div>
-                <nav id='rm-toolbar-nav'>
-                    {/* <NavLink to='/' onClick={() => scrollTo('about')}>About</NavLink>
-                    <NavLink to='/' onClick={() => scrollTo('contact')}>Contact</NavLink> */}
-                    <button onClick={() => scrollTo('about')}>About</button>
-                    <button onClick={() => scrollTo('contact')}>Contact</button>
+                <nav id='rm-scrollnav-items'>
+                    <a onClick={() => scrollTo('about')}>About</a>
+                    <a onClick={() => scrollTo('projects')}>Projects</a>
+                    <a onClick={() => scrollTo('services')}>Services</a>
+                    <a onClick={() => scrollTo('contact')}>Contact</a>
                 </nav>
+                <div id={'rm-scrollnav-burger-menu'}><HamburgerIcon height={45} width={45}/></div>
             </div>
         </div>
     );
