@@ -1,10 +1,10 @@
 {
-  "name": "rm-architecture.github.io",
+  "name": "hnyrxs2.github.io",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "author": "Honey Rose Roxas <roxashoneyrose@gmail.com>",
-  "homepage": "https://rm-architecture.github.io/",
+  "homepage": "https://hnyrxs2.github.io/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",

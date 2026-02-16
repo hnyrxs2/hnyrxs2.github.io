@@ -1,9 +1,12 @@
+import { useContext } from 'react';
+
 import { RMLogo } from './icons';
 import { scrollTo } from './common';
 import HamburgerIcon from './icons/HamburgerIcon';
+import MenuContext from './MenuContext';
 
 const ScrollNavigator = () => {
-
+    const { toggle } = useContext(MenuContext);
     return (
         <div>
             <div id='rm-scrollnav-wrapper'>
@@ -16,7 +19,7 @@ const ScrollNavigator = () => {
                     <a onClick={() => scrollTo('services')}>Services</a>
                     <a onClick={() => scrollTo('contact')}>Contact</a>
                 </nav>
-                <div id={'rm-scrollnav-burger-menu'}><HamburgerIcon height={45} width={45}/></div>
+                <div id={'rm-scrollnav-burger-menu'} onClick={(e) => toggle(e.currentTarget)}><HamburgerIcon height={45} width={45}/></div>
             </div>
         </div>
     );

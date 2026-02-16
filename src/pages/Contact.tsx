@@ -9,7 +9,8 @@ type ColumnType = 'contact' | 'studio' | 'social';
 interface IDetails {
     type: ColumnType;
     value: string;
-    icon?: JSX.Element
+    icon?: JSX.Element,
+    displayName?: string;
 }
 const Contact = () => {
     const iconSize: IconProps = {
@@ -17,26 +18,12 @@ const Contact = () => {
         width: 20
     };
 
-    const normalizeURL = (input: string) => {
-        try {
-            const url = input.match(/^https?:\/\//i)
-                ? new URL(input)
-                : new URL('https://' + input);
-
-            url.hostname = url.hostname.replace(/^www\./i, '');
-
-            return url.hostname + url.pathname;
-        } catch {
-            return input;
-        }
-    }
-
     const details: IDetails[] = [
         { type: 'contact', value: ArchitectDetails.PhoneNumber, icon: <PhoneIcon height={iconSize.height} width={iconSize.width} /> },
         { type: 'contact', value: ArchitectDetails.Email, icon: <EmailIcon height={iconSize.height} width={iconSize.width} /> },
         { type: 'contact', value: ArchitectDetails.Location, icon: <LocationIcon height={iconSize.height} width={iconSize.width} /> },
-        { type: 'social', value: ArchitectDetails.Facebook, icon: <FacebookIcon height={iconSize.height} width={iconSize.width} /> },
-        { type: 'social', value: ArchitectDetails.Linkedin, icon: <LinkedinIcon height={iconSize.height} width={iconSize.width} /> },
+        { type: 'social', value: ArchitectDetails.Facebook, icon: <FacebookIcon height={iconSize.height} width={iconSize.width} />, displayName: 'Facebook' },
+        { type: 'social', value: ArchitectDetails.Linkedin, icon: <LinkedinIcon height={iconSize.height} width={iconSize.width} />, displayName: 'LinkedIn' },
         { type: 'studio', value: 'About' },
         { type: 'studio', value: 'Project' },
         { type: 'studio', value: 'Services' }];
@@ -46,7 +33,7 @@ const Contact = () => {
         {details.filter(detail => detail.type === columnType).map((detail, key) =>
         (<div id='rm-contactus-item' key={key}>
             {detail.icon && <div id='rm-contactus-item-icon'>{detail.icon}</div>}
-            {detail.type === 'social' ? <a target='_blank' href={detail.value} id='rm-contactus-item-value'>{normalizeURL(detail.value)}</a> :
+            {detail.type === 'social' ? <a target='_blank' href={detail.value} id='rm-contactus-item-value'>{detail.displayName}</a> :
                 // to do: if studio, navigate to page i.e., About, Project, or Services
                 detail.type === 'studio' ? <a id='rm-contactus-item-value'>{detail.value}</a> :
                 <span id='rm-contactus-item-value'>{detail.value}</span>}

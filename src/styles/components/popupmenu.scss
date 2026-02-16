@@ -1,0 +1,38 @@
+@use '../constant.scss' as *;
+
+#rm-popupmenu-wrapper {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: $color-off-white;
+    border: 1px solid #ccc;
+    min-width: 150px;
+    box-shadow: 0 4px 12px $color-dark-stone;
+    z-index: 1000;
+}
+
+#rm-popupmenu-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    #rm-popupmenu-list-item {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 7vh;
+        border-bottom: 1px solid $color-dark-stone;
+    }
+
+    #rm-popupmenu-list-item:hover {
+        background-color: $color-background;
+        color: $color-text-primary;
+    }
+
+    #rm-popupmenu-list-item:last-child {
+        border-bottom: none;
+    }
+    
+}
