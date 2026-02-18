@@ -1,14 +1,16 @@
 @use '../constant.scss' as *;
 
 #rm-popupmenu-wrapper {
-    position: absolute;
+    position: none;
     top: 100%;
-    right: 0;
+    right: 0.5em;
     background: $color-off-white;
+    width: 50%;
     border: 1px solid #ccc;
-    min-width: 150px;
     box-shadow: 0 4px 12px $color-dark-stone;
     z-index: 1000;
+    animation: slideDown 0.2s ease-out;
+    transform-origin: top;
 }
 
 #rm-popupmenu-list-container {
@@ -21,9 +23,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
-        height: 7vh;
-        border-bottom: 1px solid $color-dark-stone;
+        // width: 100%;
+        height: 5vh;
+        padding: 0.5em;
+        // border-bottom: 1px solid $color-dark-stone;
     }
 
     #rm-popupmenu-list-item:hover {
@@ -35,4 +38,21 @@
         border-bottom: none;
     }
     
+}
+
+@media (max-width: $bp-tablet) {
+    #rm-popupmenu-wrapper {
+        display: absolute;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
