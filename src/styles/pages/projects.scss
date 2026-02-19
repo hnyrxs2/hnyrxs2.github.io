@@ -1,0 +1,112 @@
+@use '../constant.scss' as *;
+
+#rm-project-tiles-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 2em 0 2em;
+    padding: 1em;
+    box-sizing: border-box;
+
+    // border: 1px solid black;
+
+
+    #rm-project-tiles {
+        display: flex;
+        flex-direction: row;
+
+        cursor: pointer;
+    }
+
+    #rm-project-tile-item {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5em;
+        border-radius: 0.5em;
+        margin: 0.5em;
+        box-shadow: 0 4px 12px $color-dark-stone;
+
+        #rm-project-tile-img {
+            width: 80%;
+        }
+
+        #rm-project-tile-title {
+            font-size: 1.2em;
+            font-weight: 500;
+        }
+
+        #rm-project-tile-desc {
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-align: justify;
+            font-size: small;
+        }
+    }
+}
+
+// OVERLAY ITEMS
+#rm-project-tile-overlay-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+}
+
+#rm-project-tile-overlay-img {
+    width: 100%;
+}
+
+#rm-project-tile-overlay-title {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+#rm-project-tile-overlay-desc {
+    font-size: small;
+}
+
+@media (max-width: $bp-tablet) {
+    #rm-project-tiles-wrapper {
+        #rm-project-tiles {
+            flex-direction: column;
+        }
+
+        #rm-project-tile-item {
+            height: inherit;
+
+            #rm-project-tile-title {
+                font-size: 1em;
+                font-weight: 500;
+            }
+
+            #rm-project-tile-desc {
+                -webkit-line-clamp: 2;
+                line-clamp: 2;
+                font-size: smaller;
+            }
+        }
+    }
+
+    #rm-project-tile-overlay-item {
+        height: 95%;
+    }
+
+    #rm-project-tile-overlay-title {
+        font-size: x-large;
+    }
+
+    #rm-project-tile-overlay-desc {
+        overflow-y: scroll;
+        -ms-overflow-style: none;
+        &::-webkit-scrollbar {
+            display: none;
+            /* Chrome/Safari/Opera */
+        }
+    }
+}

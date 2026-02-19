@@ -11,7 +11,7 @@ const ScrollNavigator = () => {
         <div>
             <div id='rm-scrollnav-wrapper'>
                 <div id='rm-scrollnav-logo'>
-                <RMLogo/>
+                <RMLogo theme='dark' />
                 </div>
                 <nav id='rm-scrollnav-items'>
                     <a onClick={() => scrollTo('about')}>About</a>
@@ -19,7 +19,7 @@ const ScrollNavigator = () => {
                     <a onClick={() => scrollTo('services')}>Services</a>
                     <a onClick={() => scrollTo('contact')}>Contact</a>
                 </nav>
-                <div id={'rm-scrollnav-burger-menu'} onClick={(e) => toggle(e.currentTarget)}><HamburgerIcon height={45} width={45}/></div>
+                <div id={'rm-scrollnav-burger-menu'} onClick={(e) => toggle(e.currentTarget)}><HamburgerIcon height={45} width={45} theme='dark'/></div>
             </div>
         </div>
     );

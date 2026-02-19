@@ -1,12 +1,13 @@
-
 @import '../src/styles/components/toolbar.scss';
 @import '../src//styles/components/scrollnavigator.scss';
 @import '../src/styles/components/carousel.scss';
-@import '../src/styles/components/about.scss';
-@import '../src/styles/components/contactus.scss';
 @import '../src//styles//components/popupmenu.scss';
+@import '../src//styles//components/overlaypopup.scss';
 
 /* @import '../src/styles/pages/homepage.scss'; */
+@import '../src/styles/pages/contactus.scss';
+@import '../src/styles/pages/about.scss';
+@import '../src/styles/pages/projects.scss';
 
 
 :root {
@@ -30,6 +31,7 @@ a {
   /* color: $primaryText; */
   text-decoration: inherit;
 }
+
 /* a:hover {
   color: #535bf2;
 } */
@@ -37,9 +39,17 @@ a {
 body {
   margin: 0;
   display: flex;
-  /* min-width: 320px;
-  min-height: 100vh; */
   background-color: #F7F5F2;
+
+  /* scrollbar-width: none; */
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE/Edge */
+
+  &::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari/Opera */
+  }
 }
 
 h1 {
@@ -58,9 +68,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -71,9 +83,11 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }

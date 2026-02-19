@@ -1,4 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Provider } from 'react-redux';
+import { store } from './store';
 
 import './App.scss'
 // import ToolBar from './components/Toolbar';
@@ -11,19 +13,21 @@ import MenuProvider from './components/MenuProvider';
 function App() {
 
   return (
-    <BrowserRouter>
-      <MenuProvider>
-        {/* <ToolBar /> */}
-        <ScrollNavigator />
-        {/* Routes */}
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </MenuProvider>
+    <Provider store={store}>
+      <BrowserRouter>
+        <MenuProvider>
+          {/* <ToolBar /> */}
+          <ScrollNavigator />
+          {/* Routes */}
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </MenuProvider>
 
-    </BrowserRouter>
+      </BrowserRouter>
+    </Provider>
   );
 }
 

@@ -1,9 +1,10 @@
 import React from 'react';
 import MenuContext from './MenuContext';
+import { useAppSelector } from '../store/hooks';
 
 export interface IPopupMenu {
     size: 'small' | 'medium' | 'large';
-    items: string[];
+    // items: string[];
     // onOpenMenu: () => void;
     isOpen: boolean;
     onCloseMenu: () => void;
@@ -11,9 +12,11 @@ export interface IPopupMenu {
 };
 }
 
-const PopupMenu: React.FC<IPopupMenu> = ({ items, isOpen, onCloseMenu, position }) => {
+const PopupMenu: React.FC<IPopupMenu> = ({ isOpen, onCloseMenu, position }) => {
     const menuRef = React.useRef<HTMLDivElement>(null);
     const { close } = React.useContext(MenuContext);
+
+    const { items } = useAppSelector(state => state.ui.popUpMenu);
 
     React.useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {

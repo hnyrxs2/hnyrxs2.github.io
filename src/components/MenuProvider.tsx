@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import MenuContext from './MenuContext';
 import PopupMenu from './PopupMenu';
-
+import OverlayPopup from './OverlayPopup';
 
 const MenuProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
@@ -31,7 +31,8 @@ const MenuProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => 
                 }
             }}>
             {children}
-            <PopupMenu isOpen={isOpen} onCloseMenu={() => setOpen(false)} items={['About', 'Services', 'Contact Us']} size='small' position={position} />
+            <PopupMenu isOpen={isOpen} onCloseMenu={() => setOpen(false)} size='small' position={position} />
+            <OverlayPopup />
         </MenuContext.Provider>
     );
 }
