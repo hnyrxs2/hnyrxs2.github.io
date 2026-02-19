@@ -8,10 +8,10 @@
     padding: 1em;
     box-sizing: border-box;
     align-items: start;
-    // height: 500px; // temp only
 
     #rm-about-img {
-        width: 30%;
+        width: 15%;
+        border-radius: 1em;
     }
 
     #rm-about-content {
@@ -30,3 +30,30 @@
         margin: 0;
     }
 }
+
+@media(max-width: $bp-tablet) {
+    #rm-about-wrapper {
+        flex-direction: column-reverse;
+        align-items: center;
+
+        #rm-about-img {
+            width: 80%;
+            margin-top: 1em;
+        }
+    }
+}
+
+@media (max-width: $bp-laptop) {
+    #rm-about-wrapper {
+        align-items: center;
+    }
+}
+
+@media (max-width: $bp-desktop) {
+    #rm-about-wrapper {
+        #rm-about-img {
+            width: 30%;
+        }
+    }
+}
+
