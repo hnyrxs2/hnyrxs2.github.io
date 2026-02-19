@@ -1,15 +1,32 @@
-// #about {
-//     min-height: 500vh;
-// }
+@use '../constant.scss' as *;
 
 #rm-about-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 500px; // temp only
+    margin: 0 2em;
+    padding: 1em;
+    box-sizing: border-box;
+    align-items: start;
+    // height: 500px; // temp only
 
-    img {
-        width: 20%;
-        height: auto;
+    #rm-about-img {
+        width: 30%;
+    }
+
+    #rm-about-content {
+        display: flex;
+        flex-direction: column;
+        padding-left: 1em;
+    }
+
+    #rm-about-header {
+        text-align: right;
+        margin: 0;
+    }
+
+    #rm-about-desc {
+        text-align: justify;
+        margin: 0;
     }
 }

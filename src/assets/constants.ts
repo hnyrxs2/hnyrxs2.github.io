@@ -44,3 +44,11 @@ This project demonstrates how climate-responsive design can enhance both perform
         src: c3
     }
 ];
+
+export enum AboutUsSection {
+    Title = 'About Us',
+    Description = `RM Architecture is a design-driven architectural studio committed to creating purposeful, refined, and enduring spaces. We believe that architecture is more than the construction of buildings—it is the shaping of experiences, environments, and everyday life.
+Our approach blends creativity with technical precision, ensuring that each project reflects both strong conceptual thinking and practical functionality. From residential homes to commercial developments, we prioritize thoughtful planning, material integrity, and contextual sensitivity in every design.
+At RM Architecture, collaboration is at the heart of our process. We work closely with clients, consultants, and builders to transform ideas into well-executed spaces that are both visually compelling and highly livable.
+Guided by clarity, innovation, and sustainability, we strive to deliver architecture that responds to its environment while meeting the evolving needs of modern living.`
+}

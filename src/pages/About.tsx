@@ -1,14 +1,13 @@
-import { rm_logo } from '../assets/index';
+import { AboutUsSection, rm_logo } from '../assets/index';
 
 const About = () => {
-    return(<div id='rm-about-wrapper'>
-        {/* <h1>About</h1> */}
-        <img src={rm_logo}/>
-        <p>A versatile Architect capable of managing the full project lifecycle, from conceptual plans to construction completion, for both government and private clients. I am a detail-oriented professional with almost a decade of experience in technical drawings for international and local projects. As a Senior Project Controller, I am well-versed in the National Building Code of the Philippines (NBCP) as applied to project implementations.</p>
-{/*     
-        <div>
-            <iframe src='https://online.fliphtml5.com/hqagu/okln/#google_vignette'/>
-        </div> */}
+    return (<div id='rm-about-wrapper'>
+        <img id='rm-about-img' src={rm_logo} />
+        <div id='rm-about-content'>
+            <h2 id='rm-about-header'>{AboutUsSection.Title}</h2>
+            <p id='rm-about-desc'>{AboutUsSection.Description}</p>
+        </div>
+
     </div>);
 };
 
