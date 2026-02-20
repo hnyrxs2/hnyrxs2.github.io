@@ -1,9 +1,13 @@
-export { default as EmailIcon } from './EmailIcon';
-export {default as FacebookIcon } from './FacebookIcon';
-export { default as InstagramIcon } from './InstagramIcon';
-export { default as LocationIcon } from './LocationIcon';
-export { default as PhoneIcon } from './PhoneIcon';
-export { default as RMLogo } from './RMLogo';
-export {default as LinkedinIcon } from './LinkedinIcon';
+export { EmailIcon } from './EmailIcon';
+export { FacebookIcon } from './FacebookIcon';
+export { InstagramIcon } from './InstagramIcon';
+export { LocationIcon } from './LocationIcon';
+export { PhoneIcon } from './PhoneIcon';
+export { RMLogo } from './RMLogo';
+export { LinkedinIcon } from './LinkedinIcon';
+export { PlanningIcon } from './PlanningIcon';
+export { BuildDesignIcon } from './BuildDesignIcon';
+export { CloseButtonIcon } from './CloseButtonIcon';
+export { HamburgerIcon } from './HamburgerIcon';
 
 export * from './types';

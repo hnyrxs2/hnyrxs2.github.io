@@ -1,7 +1,7 @@
 import type { ITheme } from './types';
 
 
-const RMLogo = (props: ITheme) => {
+export const RMLogo = (props: ITheme) => {
     const colorValue = props.theme === 'light' ? '#F5E6D8' : '#3A332E';
     return(
     <svg viewBox='0 0 300 200' xmlns='http://www.w3.org/2000/svg'>
@@ -17,5 +17,3 @@ const RMLogo = (props: ITheme) => {
     </svg>
     );
 };
-
-export default RMLogo;

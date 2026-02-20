@@ -1,6 +1,6 @@
 import type { IconProps, ITheme } from './types';
 
-const HamburgerIcon = (props: IconProps & ITheme) => {
+export const HamburgerIcon = (props: IconProps & ITheme) => {
     const colorValue = props.theme === 'light' ? '#F5E6D8' : '#3A332E';
 
     return (
@@ -11,5 +11,3 @@ const HamburgerIcon = (props: IconProps & ITheme) => {
         </svg>
     );
 };
-
-export default HamburgerIcon;

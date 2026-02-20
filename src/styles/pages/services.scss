@@ -1,0 +1,41 @@
+@use '../constant.scss' as *;
+
+#rm-services-wrapper {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0 3em 3em 3em;
+    margin: 2em 0;
+
+    background-color: $color-concrete-gray;
+
+}
+
+#rm-services-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+#rm-services-item {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: flex-start;
+    padding: 1em;
+    border-radius: 1em;
+    margin: 0.5em;
+    background-color: $color-off-white;
+
+}
+#rm-service-item-name {
+    margin: 0;
+    text-align: left;
+}
+
+#rm-service-item-desc {
+    text-align: justify;
+    overflow-y: hidden;
+    font-size: small;
+}

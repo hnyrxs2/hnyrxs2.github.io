@@ -1,6 +1,6 @@
 import type { IconProps } from './types';
 
-const EmailIcon = (props: IconProps) => {
+export const EmailIcon = (props: IconProps) => {
     return (<svg width={props.width} height={props.height} viewBox='0 -2.5 20 20' version='1.1' xmlns='http://www.w3.org/2000/svg'>
         <title>email [#1573]</title>
         <desc>Created with Sketch.</desc>
@@ -18,5 +18,3 @@ const EmailIcon = (props: IconProps) => {
         </g>
     </svg>);
 };
-
-export default EmailIcon;
